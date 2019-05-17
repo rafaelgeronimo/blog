@@ -4,8 +4,8 @@ title: "Template literals - Usando variáveis em string no ES6+"
 author: rafael
 categories: [javascript, ES6+]
 image: assets/images/2018/10/03/01.png
-featured: true
-hidden: true
+featured: false
+hidden: false
 ---
 Antes do ES6, utilizávamos o operador de concatenação (`+`) para concantenar string:
 
