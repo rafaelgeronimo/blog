@@ -3,7 +3,7 @@ layout: post
 title: "Aprenda React em 5 minutos"
 author: rafael
 categories: [react, javascript, tutorial]
-image: assets/images/2019/05/17/01.png
+image: https://i.imgur.com/etBAeUj.png
 featured: true
 hidden: true
 ---
