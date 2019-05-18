@@ -89,7 +89,7 @@ Nosso _component_ `Hello` é completamente estático. Ele processa sempre a mesm
 Para alcançar esse tipo de reutilização, adicionaremos `props`. E é assim que você passa `props` para um _component_:
 
 ```jsx=
-ReacDOM.render(<Hello message="my friend" />, document.getElementById("app"));
+ReactDOM.render(<Hello message="my friend" />, document.getElementById("app"));
 ```
 
 Essa `props` é chamada de `message` e tem o valor 'my friend'. Podemos acessar essa `props` dentro do _component_ `Hello` referenciando `this.props.message`, assim:
