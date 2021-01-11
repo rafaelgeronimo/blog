@@ -8,14 +8,17 @@ featured: true
 hidden: true
 ---
 
-Pode ser muito fácil seguir a [documentação oficial do GitHub](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account) sobre como adicionar sua chave SSH à sua conta. Porém aqui você vai encontrar uma forma muito mais rápida de adicionar sua chave SSH ao GitHub caso você use alguma distribuição Linux.
+[![hackmd-github-sync-badge](https://hackmd.io/2OUgOs52SZSZMPkIhXLSGg/badge)](https://hackmd.io/2OUgOs52SZSZMPkIhXLSGg)
+
+
+Pode ser muito fácil seguir a [documentação oficial do GitHub](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account) sobre como adicionar sua chave SSH à sua conta. Porém aqui você vai encontrar uma forma muito mais rápida de adicionar sua chave SSH ao GitHub.
 
 # Gerando uma chave SSH
 
 ## Verifique a existência de uma chave:
 
 ```shell=
-ls -al ~/.ssh
+ls ~/.ssh
 ```
 
 O nome do seu arquivo de chaves públicas pode ser algum da lista abaixo:
@@ -24,6 +27,7 @@ O nome do seu arquivo de chaves públicas pode ser algum da lista abaixo:
 - id_ecdsa.pub
 - id_ed25519.pub
 - id_rsa.pub
+
 
 ## Gere uma nova chave SSH se necessário
 
@@ -41,9 +45,27 @@ A mensagem solicita um local e um nome para o seu arquivo de chave pública. Nes
 
 Em seguida, será solicitada a criação de uma senha, porém não é obrigatória. Caso prefira usar a segurança, não esqueça de anotar a senha em um local seguro, como um gerenciador de senhas.
 
+## Adicionando a chave SSH ao ssh-agent
+
+Verifique se o ssh-agent está em execução ou então inicie o serviço com o comando:
+
+- linux
+```shell=
+$ eval `ssh-agent -s`
+```
+- windows
+```shell=
+ssh-agent -s
+```
+
+Agora adicione a sua chave SSH privada ao ssh-agent com o comando:
+```shell=
+ssh-add ~/.ssh/id_rsa.pub
+```
+
 ## Adicionando uma chave SSH ao GitHub
 
-Para exibir sua chave SSH pública, execute o comando `ls -al ~/ssh`, identifique o nome do arquivo e então mostre o conteúdo do arquivo no console com o comando:
+Para exibir sua chave SSH pública, execute o comando `ls ~/ssh`, identifique o nome do arquivo e então mostre o conteúdo do arquivo no console com o comando:
 
 ```shell=
 cat ~/.ssh/id_rsa.pub
