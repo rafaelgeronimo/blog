@@ -8,9 +8,6 @@ featured: true
 hidden: true
 ---
 
-[![hackmd-github-sync-badge](https://hackmd.io/2OUgOs52SZSZMPkIhXLSGg/badge)](https://hackmd.io/2OUgOs52SZSZMPkIhXLSGg)
-
-
 Pode ser muito fácil seguir a [documentação oficial do GitHub](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account) sobre como adicionar sua chave SSH à sua conta. Porém aqui você vai encontrar uma forma muito mais rápida de adicionar sua chave SSH ao GitHub.
 
 # Gerando uma chave SSH
