@@ -1,7 +1,7 @@
 # Site
 name: "Rafael Gerônimo"
-description: "Analista de Suporte | Desenvolvedor Web"
-meta_description: "rafael gerônimo, sistemas para internet, javascript, nodejs, pwa"
+description: "Desenvolvedor Web | Estudante na Trybe"
+meta_description: "rafael gerônimo, sistemas para internet, javascript, nodejs, pwa, trybe"
 logo: 'assets/images/log.png'
 favicon: 'assets/images/logo.png'
 baseurl: 
@@ -18,7 +18,7 @@ authors:
     email: contato@rafaelgeronimo.com
     web: https://rafaelgeronimo.com
     twitter: https://twitter.com/RAFAELGER0NIM0
-    description: "Analista de Suporte com formação em desenvolvimento de Sistemas para Internet"
+    description: "Desenvolvedor Web com formação em desenvolvimento de Sistemas para Internet"
 
 # Plugins
 plugins: 
