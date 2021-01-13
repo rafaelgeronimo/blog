@@ -3,7 +3,7 @@ layout: post
 title: "Adicionando chave SSH ao GitHub"
 author: rafael
 categories: [github, ssh, tutorial]
-image: assets/images/2020/01/11/01.png
+image: assets/images/2021/01/11/01.png
 featured: true
 hidden: true
 ---
@@ -17,19 +17,24 @@ Pode ser muito fácil seguir a [documentação oficial do GitHub](https://help.g
 
 ## Verifique a existência de uma chave:
 
+O comandos devem ser executados no Terminal (Linux) ou no Powershell (Windows).
+Execute esse comando para verificar se já existe alguma chave SSH gerada em seu sistema:
+
 ```shell=
 ls ~/.ssh
 ```
 
 O nome do seu arquivo de chaves públicas pode ser algum da lista abaixo:
 
+- id_rsa.pub
 - id_dsa.pub
 - id_ecdsa.pub
 - id_ed25519.pub
-- id_rsa.pub
 
 
 ## Gere uma nova chave SSH se necessário
+
+Se não encontrar nenhum dos arquivos da lista, significa que não há nenhuma chave SSH salva no diretório. Então, será necessário gerar uma nova chave. Execute esse comando:
 
 ```shell=
 ssh-keygen -t rsa -b 4096 -C "seu_email@exemplo.com"
@@ -37,9 +42,17 @@ ssh-keygen -t rsa -b 4096 -C "seu_email@exemplo.com"
 
 Essa mensagem será exibida no terminal:
 
+- linux
 ```shell=
-> Enter a file in which to save the key (/home/you/.ssh/id_rsa): [Press enter]
+> Enter a file in which to save the key (/home/seu_nome/.ssh/id_rsa): [Aperte enter]
 ```
+
+- windows
+```shell=
+> Enter file in which to save the key
+(C:\Users\seu_nome/.ssh/id_rsa): [Aperter enter]
+```
+
 
 A mensagem solicita um local e um nome para o seu arquivo de chave pública. Nesse caso, basta apenas pressionar a tecla [enter] para usar o local e o nome padrão ou então informar uma de sua preferência.
 
@@ -65,7 +78,7 @@ ssh-add ~/.ssh/id_rsa.pub
 
 ## Adicionando uma chave SSH ao GitHub
 
-Para exibir sua chave SSH pública, execute o comando `ls ~/ssh`, identifique o nome do arquivo e então mostre o conteúdo do arquivo no console com o comando:
+Para exibir sua chave SSH pública, execute o comando `ls ~/.ssh`, identifique o nome do arquivo e então mostre o conteúdo do arquivo no console com o comando:
 
 ```shell=
 cat ~/.ssh/id_rsa.pub
