@@ -4,6 +4,49 @@ Copyright: Sal, WowThemes.net, https://www.wowthemes.net
 Version: 1.0.22 
 License: https://www.wowthemes.net/freebies-license/ 
 */
+
+/* adding toggle mode (dark/light */
+
+body {
+  background: #2b2b2b;
+  color: whitesmoke;
+  transition: all 0.3s;
+}
+body.active {
+  background: #f8f8f8;
+  color: #333;
+}
+.dark-mode {
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.toggle-mode {
+  cursor: pointer;
+  display: flex;
+  width: 40px;
+  height: 20px;
+  border-radius: 160px;
+  background: #555;
+  margin-top: 9px;
+  transition: 0.5s;
+  box-shadow: inset 0 4px 40px rgba(0, 0, 0, 0.3),
+              inset 0 4px 4px rgba(0, 0, 0, 0.3),
+              inset 0 -4px 4px rgba(0, 0, 0, 0.3);
+}
+.toggle-mode .indicator {
+  margin-left: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to bottom, #999, #444);
+  border-radius: 50%;
+  transform: scale(0.8);
+  transition: 0.5s;
+}
+.toggle-mode.active .indicator {
+  margin-left: 20px;
+}
+
+/* end adding toggle mode (dark/light */
 .mainheading {
   padding: 1rem 0rem;
 }
