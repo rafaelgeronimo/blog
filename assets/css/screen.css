@@ -6,7 +6,7 @@ License: https://www.wowthemes.net/freebies-license/
 */
 
 /* adding toggle mode (dark/light */
-
+/*
 body {
   background: #2b2b2b;
   color: whitesmoke;
@@ -45,7 +45,7 @@ body.active {
 .toggle-mode.active .indicator {
   margin-left: 20px;
 }
-
+*/
 /* end adding toggle mode (dark/light */
 .mainheading {
   padding: 1rem 0rem;
