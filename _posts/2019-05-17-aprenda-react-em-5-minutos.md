@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Aprenda React em 5 minutos"
+title: "Introdução ao React"
 author: rafael
 categories: [react, javascript, tutorial]
 image: assets/images/2019/05/17/1.png
